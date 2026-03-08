@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.container {
+  width: 1200px;
+  max-width: 95%;
+  margin: 20px auto 40px auto;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: #555;
+}
+
+.controls {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 14px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.control-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button.active {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+select,
+input[type="range"] {
+  padding: 6px;
+}
+
+.chart-section {
+  background: white;
+  margin-top: 22px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.scatter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+.axis-label {
+  font-size: 14px;
+  fill: #333;
+}
+
+.legend {
+  font-size: 12px;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(20, 20, 20, 0.95);
+  color: white;
+  padding: 8px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.grid line {
+  stroke: #e5e5e5;
+}
+
+.grid path {
+  stroke-width: 0;
+}

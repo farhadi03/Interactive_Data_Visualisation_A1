@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electricity Production and CO₂ Emissions</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Data Visualisation of Electricity Production and CO₂ Emissions</h1>
+    <p class="subtitle">
+      Comparing CO₂ emissions and renewable electricity trends across selected countries.
+    </p>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="countrySelect">Highlight country:</label>
+        <select id="countrySelect">
+          <option value="All">All countries</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label>Line chart metric:</label>
+        <button id="totalBtn" class="active">Total CO₂</button>
+        <button id="perCapitaBtn">CO₂ per capita</button>
+      </div>
+    </div>
+
+    <section class="chart-section">
+      <h2>CO₂ Emissions Over Time</h2>
+      <div id="lineChart"></div>
+    </section>
+
+    <section class="chart-section">
+      <div class="scatter-header">
+        <h2>Renewable Electricity Share vs CO₂ per Capita</h2>
+        <div class="year-control">
+          <label for="yearSlider">Year: <span id="yearValue"></span></label>
+          <input type="range" id="yearSlider" />
+        </div>
+      </div>
+      <div id="scatterPlot"></div>
+    </section>
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
